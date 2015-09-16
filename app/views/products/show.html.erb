@@ -9,14 +9,14 @@
 
 
 
-
+<div class="items">
 <h3>Items (<%= @product.items.size %>)</h3>
 <%= render partial: 'products/item', collection: @product.items %>
+</div>
 
-
+<div class="form">
 <%= render partial: 'items/form' %>
-
-
+</div>
 
 <div class="destroy">
 <p>

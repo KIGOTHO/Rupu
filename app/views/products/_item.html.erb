@@ -1,8 +1,8 @@
 <div>
     <p><%= image_tag "Items/#{item.image_url}" %></p>
-    <h4><%= item.title %></h4>
+    <p><%= item.title %></p>
     <p><%= item.description %></p>
-    <p><%= item.price_to %></p>
-    <p><%= item.price_from %></p>
-    <p><%= item.price_save %></p>
+    <p id="p_from"><%= item.price_from %></p>
+    <p id="p_to"><%= item.price_to %></p>
+    <p id="p_save"><%= item.price_save %></p>
 </div>
