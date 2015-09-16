@@ -7,7 +7,23 @@
     <% end %>
     <% end %>
 
+
+
+
 <h3>Items (<%= @product.items.size %>)</h3>
 <%= render partial: 'products/item', collection: @product.items %>
 
+
 <%= render partial: 'items/form' %>
+
+
+
+<div class="destroy">
+<p>
+  Items delete:
+    <% @product.items.each do |item| %>
+    <%= link_to item.title, item_path(item), method: :delete %>
+
+  <% end %>
+</p>
+</div>
