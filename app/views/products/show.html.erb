@@ -1,6 +1,24 @@
 <p id="notice"><%= notice %></p>
 
+   <% content_for :menu do %>
+
+       <% @products.each do |product| %>
+      <tr>
+          <td><h4><%=link_to product.title, product %></h4></td>
+<!--
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+-->
+      </tr>
+
+    <% end %>
+    <% end %>
+
+
+
 <p>
+    
   <strong>Title:</strong>
   <%= @product.title %>
 </p>

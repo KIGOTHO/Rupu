@@ -7,7 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+     <header>
+     <% if content_for? :menu %>
+      <nav>
+        <%= yield :menu %>
+      </nav>
+    <% end %>        
+    </header>
+    
+    
+    <main>
+    <% content_for(:banner) do %>    
+    <% end %>
+    
+    
+    </main>
 <%= yield %>
+    
+    
 
 </body>
 </html>
