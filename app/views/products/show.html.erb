@@ -1,27 +1,13 @@
 <p id="notice"><%= notice %></p>
-
    <% content_for :menu do %>
-
        <% @products.each do |product| %>
       <tr>
           <td><h4><%=link_to product.title, product %></h4></td>
-<!--
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
--->
       </tr>
-
     <% end %>
     <% end %>
 
+<h3>Items (<%= @product.items.size %>)</h3>
+<%= render partial: 'products/item', collection: @product.items %>
 
-
-<p>
-    
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= render partial: 'items/form' %>
