@@ -1,8 +1,10 @@
-<div>
+<div class="items">
     <p><%= image_tag "Items/#{item.image_url}" %></p>
     <p><%= item.title %></p>
     <p><%= item.description %></p>
     <p id="p_from"><%= item.price_from %></p>
     <p id="p_to"><%= item.price_to %></p>
     <p id="p_save"><%= item.price_save %></p>
+    <p><%= link_to "Buy"%></p>
+    
 </div>

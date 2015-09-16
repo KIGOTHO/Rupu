@@ -1,2 +1,0 @@
-class EventAndActivity < Deal
-end

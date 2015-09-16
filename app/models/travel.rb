@@ -1,2 +1,0 @@
-class Travel < Deal
-end

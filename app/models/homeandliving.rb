@@ -1,2 +1,0 @@
-class HomeAndLiving < Deal
-end
